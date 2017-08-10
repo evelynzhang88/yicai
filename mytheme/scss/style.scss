@@ -6,6 +6,16 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "_mixins.scss";
+//plugins css
+@import "swiper";
+//animate
 @import "animate";
+
 @import "common";
+
+@import "footer";
+@import "header";
+
 @import "page";
+
+@import "mobile";
