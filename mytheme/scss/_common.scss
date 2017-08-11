@@ -53,9 +53,9 @@ h2.title{
     content: '';
     display: block;
     position: absolute;
-    left: -120%;
+    left: -100px;
     top: 50%;
-    width: 100%;
+    width: 90px;
     height: 1px;
     //@include transform(translate(-50%,-50%));
     background: #dbb673;
@@ -64,9 +64,9 @@ h2.title{
     content: '';
     display: block;
     position: absolute;
-    left: 120%;
+    right: -100px;
     top: 50%;
-    width: 100%;
+    width: 90px;
     height: 1px;
     //@include transform(translate(-50%,-50%));
     background: #dbb673;

@@ -1,7 +1,8 @@
 /*For page home*/
 .block-text{
   //padding: 60px;
-  background: #eee;
+  position: relative;
+  z-index: 3;
 }
 .block-img{
   overflow: hidden;
@@ -17,6 +18,7 @@
 }
 #block-intro{
   position: relative;
+  background: #eee;
   &:after{
     content: '';
     display: block;
@@ -27,14 +29,11 @@
     z-index: 2;
     border: rgba(255,255,255,0.5) 1px solid;
   }
-  .block-text{
-    padding: 60px;
-  }
   .des{
     text-align: left;
   }
   .btn{
-    float: right;
+    //float: right;
     margin-top: 20px;
   }
 }
@@ -52,7 +51,7 @@
     margin-bottom: 40px;
   }
   .btn{
-    float: right;
+    //float: right;
   }
 }
 #block-service{
@@ -69,9 +68,23 @@
     margin-bottom: 10px;
   }
   .btn{
-    float: right;
+    //float: right;
     margin-top: 50px;
   }
 }
 
-/*---------For page home---------*/
+@media all and (min-width: 768px) {
+  #block-intro{
+    .block-text{
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 60px;
+    }
+  }
+  .btn{
+    float: right;
+  }
+}
+
+/*---------End page home---------*/

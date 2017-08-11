@@ -661,9 +661,9 @@ h2.title:before {
   content: '';
   display: block;
   position: absolute;
-  left: -120%;
+  left: -100px;
   top: 50%;
-  width: 100%;
+  width: 90px;
   height: 1px;
   background: #dbb673;
 }
@@ -671,9 +671,9 @@ h2.title:after {
   content: '';
   display: block;
   position: absolute;
-  left: 120%;
+  right: -100px;
   top: 50%;
-  width: 100%;
+  width: 90px;
   height: 1px;
   background: #dbb673;
 }
@@ -1304,7 +1304,8 @@ h2.title:after {
 /*-----End main menu-----*/
 /*For page home*/
 .block-text {
-  background: #eee;
+  position: relative;
+  z-index: 3;
 }
 
 .block-img {
@@ -1319,6 +1320,7 @@ h2.title:after {
 
 #block-intro {
   position: relative;
+  background: #eee;
 }
 #block-intro:after {
   content: '';
@@ -1331,14 +1333,10 @@ h2.title:after {
   z-index: 2;
   border: rgba(255, 255, 255, 0.5) 1px solid;
 }
-#block-intro .block-text {
-  padding: 60px;
-}
 #block-intro .des {
   text-align: left;
 }
 #block-intro .btn {
-  float: right;
   margin-top: 20px;
 }
 
@@ -1356,9 +1354,6 @@ h2.title:after {
 #block-stockholder .des {
   margin-bottom: 40px;
 }
-#block-stockholder .btn {
-  float: right;
-}
 
 #block-service {
   text-align: center;
@@ -1375,9 +1370,36 @@ h2.title:after {
   margin-bottom: 10px;
 }
 #block-service .btn {
-  float: right;
   margin-top: 50px;
 }
 
-/*---------For page home---------*/
+@media all and (min-width: 768px) {
+  #block-intro .block-text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 60px;
+  }
+
+  .btn {
+    float: right;
+  }
+}
+/*---------End page home---------*/
 /*just for mobile*/
+@media all and (max-width: 768px) {
+  /*For page home*/
+  #main-content {
+    width: 90vw;
+    margin: -4rem auto 0;
+  }
+
+  .btn {
+    display: block;
+    width: 60px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /*---------End page home---------*/
+}
