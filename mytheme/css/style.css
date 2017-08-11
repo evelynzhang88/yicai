@@ -613,7 +613,7 @@ html {
 /*the rem just for set the font size for global website*/
 @media all and (max-width: 767px) {
   html {
-    font-size: 24px;
+    font-size: 12px;
   }
 }
 @media all and (min-width: 768px) {
@@ -1076,4 +1076,72 @@ p {
 }
 
 /*For header style include pc and mobile*/
+.logo img {
+  max-width: 186px;
+}
+
+#header {
+  padding: 40px 0 0;
+}
+#header .info {
+  text-align: right;
+  font-size: 0.85rem;
+  height: 18px;
+  line-height: 18px;
+  margin-top: -15px;
+}
+#header .tel {
+  display: inline-block;
+  background: url("../images/icon-phone.png") no-repeat;
+  background-size: 15px;
+  background-position: left 3px;
+  padding-left: 20px;
+}
+#header .seperate-line {
+  color: #dbb673;
+  margin: 0 20px;
+}
+#header .language {
+  display: inline-block;
+  font-weight: bold;
+}
+#header .language span {
+  display: inline-block;
+}
+#header .language .lang-cn {
+  margin-right: 8px;
+}
+
+.main-menu {
+  margin-top: 20px;
+  text-align: right;
+}
+.main-menu > .item {
+  display: inline-block;
+  position: relative;
+  margin-left: 5%;
+}
+.main-menu > .item a {
+  display: block;
+  padding-bottom: 30px;
+  color: #333;
+  text-decoration: none;
+}
+.main-menu > .item.active a, .main-menu > .item:hover a {
+  border-bottom: #dbb673 3px solid;
+}
+.main-menu > .item.active .second-menu, .main-menu > .item:hover .second-menu {
+  display: block;
+}
+.main-menu .second-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+}
+.main-menu .second-menu .item {
+  display: block;
+}
+
 /*just for mobile*/

@@ -1,1 +1,73 @@
 /*For header style include pc and mobile*/
+.logo{
+  img{
+    max-width: 186px;
+  }
+}
+#header{
+  padding: 40px 0 0;
+  .info{
+    //float: right;
+    text-align: right;
+    font-size: 0.85rem;
+    height: 18px;
+    line-height: 18px;
+    margin-top: -15px;
+  }
+  .tel{
+    display: inline-block;
+    background: url("../images/icon-phone.png") no-repeat;
+    background-size: 15px;
+    background-position: left 3px;
+    padding-left: 20px;
+  }
+  .seperate-line{
+    color: #dbb673;
+    margin: 0 20px;
+  }
+  .language{
+    display: inline-block;
+    font-weight: bold;
+    span{
+      display: inline-block;
+    }
+    .lang-cn{
+      margin-right: 8px;
+    }
+  }
+}
+
+//for main-menu
+.main-menu{
+  margin-top: 20px;
+  text-align: right;
+  >.item{
+    display: inline-block;
+    position: relative;
+    margin-left: 5%;
+    a{
+      display: block;
+      padding-bottom: 30px;
+      color: #333;
+      text-decoration: none;
+    }
+    &.active,&:hover{
+      a{
+        border-bottom: #dbb673 3px solid;
+      }
+      .second-menu{
+        display: block;
+      }
+    }
+  }
+  .second-menu{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    .item{
+      display: block;
+    }
+  }
+}
