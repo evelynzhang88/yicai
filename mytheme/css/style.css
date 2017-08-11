@@ -618,7 +618,7 @@ html {
 }
 @media all and (min-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: calc( 12px + 8 * ((100vw - 700px) / 1500));
   }
 }
 body {
@@ -1133,6 +1133,25 @@ h2.title:after {
   -ms-transform: translate(-50%, -70%);
   -o-transform: translate(-50%, -70%);
   transform: translate(-50%, -70%);
+  color: #fff;
+}
+#slideshow .swiper-pagination-bullet {
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  border-radius: 0;
+  opacity: 1;
+}
+#slideshow .swiper-pagination-bullet-active {
+  background: #dbb673;
+}
+#slideshow .swiper-container-horizontal > .swiper-pagination-bullets,
+#slideshow .swiper-pagination-custom, #slideshow .swiper-pagination-fraction {
+  bottom: 7rem;
+}
+
+#footer {
+  background: #eee;
 }
 
 /*For header style include pc and mobile*/
@@ -1142,6 +1161,8 @@ h2.title:after {
 
 #header {
   padding: 40px 0 0;
+  position: relative;
+  z-index: 2;
 }
 #header .info {
   text-align: right;
@@ -1290,6 +1311,12 @@ h2.title:after {
   overflow: hidden;
 }
 
+#main-content {
+  position: relative;
+  z-index: 2;
+  margin-top: -50px;
+}
+
 #block-intro {
   position: relative;
 }
@@ -1335,6 +1362,21 @@ h2.title:after {
 
 #block-service {
   text-align: center;
+}
+#block-service .title {
+  margin-bottom: 40px;
+}
+#block-service .block-text {
+  background: #fff;
+  padding: 50px;
+  text-align: left;
+}
+#block-service .subtitle {
+  margin-bottom: 10px;
+}
+#block-service .btn {
+  float: right;
+  margin-top: 50px;
 }
 
 /*---------For page home---------*/

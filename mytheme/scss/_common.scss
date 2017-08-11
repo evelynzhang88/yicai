@@ -13,7 +13,8 @@ html{
 }
 @media all and (min-width: 768px){
   html {
-    font-size: 14px;
+    //font-size: 14px;
+    font-size: calc( 12px + 8 * ((100vw - 700px) / 1500));
   }
 }
 
@@ -361,5 +362,23 @@ h2.title{
     max-width: 1449px;
     z-index: 2;
     @include transform(translate(-50%,-70%));
+    color: #fff;
+    .title{
+
+    }
+  }
+  .swiper-pagination-bullet{
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    border-radius: 0;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background: #dbb673;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 7rem;
   }
 }
