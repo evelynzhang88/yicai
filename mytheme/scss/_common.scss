@@ -43,6 +43,38 @@ h3{
 p{
   font-size: 1rem;
 }
+h2.title{
+  position: relative;
+  display: inline-block;
+  padding: 0.2rem;
+  margin: 0 auto;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -120%;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    //@include transform(translate(-50%,-50%));
+    background: #dbb673;
+  }
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 120%;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    //@include transform(translate(-50%,-50%));
+    background: #dbb673;
+  }
+}
+.block-text{
+  padding: 1rem;
+  text-align: center;
+}
 
 /*12 grid layout*/
 .full-width{
@@ -69,6 +101,12 @@ p{
     max-width: 1449px;
     margin: 0 auto;
   }
+  .show-on-pc{
+    display: block;
+  }
+  .show-on-mobile{
+    display: none;
+  }
 }
   //For mobile
 @media all and (max-width: 767px){
@@ -77,23 +115,30 @@ p{
       width: 100%;
     }
   }
+  .show-on-pc{
+    display: none;
+  }
+  .show-on-mobile{
+    display: block;
+  }
 }
 /*-----End grid layout-----*/
 
 
 .btn{
-  text-align: center;
-  display: block;
-  //width: 2.7rem;
-  margin: 0 auto;
-  //padding: 0.2rem 1rem;
-  background: #000;
-  color: #fff;
-  font-size: 24px;
-  //&:active{
-  //  background: #000;
-  //  color: #ccc;
-  //}
+  display: inline-block;
+  border: #dbb673 1px solid;
+  color: #dbb673;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.85rem;
+  &:after{
+    content: '';
+    display: inline-block;
+    @include size(1.4rem,0.5rem);
+    border-bottom: #dbb673 1px solid;
+    border-right: #dbb673 1px solid;
+    @include transform(skew(30deg));
+  }
 }
 
 /*Hide elements*/
@@ -183,26 +228,6 @@ p{
   }
 }
 
-
-//for port
-@media screen and (orientation: portrait){
-  .show-on-landscape{
-    display: none;
-  }
-  .show-on-portrait{
-    display: block;
-  }
-}
-
-@media screen and (orientation: landscape){
-  .show-on-landscape{
-    display: block;
-  }
-  .show-on-portrait{
-    display: none;
-  }
-
-}
 
 
 //for alertpop
@@ -320,4 +345,21 @@ p{
   left: 50%;
   top: 50%;
   @include transform(translate(-50%,-50%));
+}
+
+//override swiper
+#slideshow{
+  >img{
+    position: relative;
+    z-index: 1;
+  }
+  .text-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 86%;
+    max-width: 1449px;
+    z-index: 2;
+    @include transform(translate(-50%,-70%));
+  }
 }

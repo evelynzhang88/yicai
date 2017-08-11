@@ -9,6 +9,10 @@
     <meta name="full-screen" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="stylesheet" type="text/css" href="../mytheme/css/style.css"/>
+    <script type="text/javascript" src="js/lib/zepto.min.js"></script>
+    <script type="text/javascript" src="js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
 </head>
 <body>
     <header>
@@ -24,13 +28,14 @@
                         <span class="lang-cn">CN</span>
                         <span class="lang-EN">EN</span>
                     </div>
+                    <span class="icon-showmenu show-on-mobile"></span>
                 </div>
                 <nav class="navigation">
                     <ul class="main-menu">
                         <li class="item">
                             <a href="#">主页</a>
                         </li>
-                        <li class="item">
+                        <li class="item active">
                             <a href="#">关于我们</a>
                             <ul class="second-menu">
                                 <li class="item"><a href="#">公司简介</a></li>
@@ -49,18 +54,54 @@
         </div>
     </header>
     <!-- main content-->
-    <div class="row" id="slideshow">
-        <img src="images/kv.jpg" alt=""/>
+    <div class="full-width" id="slideshow">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="images/kv.jpg" alt=""/>
+                    <div class="text-content">
+                        <h3 class="title">kdkkdk</h3>
+                        <p class="des">jdkkdkdkd</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/kv.jpg" alt=""/>
+                    <div class="text-content">
+                        <h3 class="title">kdkkdk</h3>
+                        <p class="des">jdkkdkdkd</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/kv.jpg" alt=""/>
+                    <div class="text-content">
+                        <h3 class="title">kdkkdk</h3>
+                        <p class="des">jdkkdkdkd</p>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <!--<div class="swiper-button-prev"></div>-->
+            <!--<div class="swiper-button-next"></div>-->
+
+            <!-- If we need scrollbar -->
+            <!--<div class="swiper-scrollbar"></div>-->
+        </div>
     </div>
     <div class="narrow-width" id="main-content">
         <!-- 公司简介-->
-        <div class="row">
-            <div class="col-6">
+        <div class="row" id="block-intro">
+            <div class="col-6 block-img">
                 <img src="images/kv.jpg" alt=""/>
             </div>
-            <div class="col-6">
+            <div class="col-6 block-text">
                 <h2 class="title">公司简介</h2>
-                <p class="content">
+                <p class="des">
                     文本文本文本文本文本文本文本文本文本文本文本文本
                     文本文本文本文本文本文本文本文本文本文本文本
                     文本文本文本文本文本文本文本文本文本文本文本文本
@@ -75,7 +116,7 @@
             </div>
         </div>
         <!-- 我们的股东 -->
-        <div class="full-width">
+        <div class="full-width" id="block-stockholder">
             <h2 class="title">我们的股东</h2>
             <div class="row">
                 <div class="col-4">
@@ -117,21 +158,24 @@
             </div>
         </div>
         <!-- 服务模式 -->
-        <div class="row">
-            <div class="col-6">
-                <img src="images/kv.jpg" alt=""/>
-            </div>
-            <div class="col-6">
-                <h3 class="subtitle">
-                    股东1 -
-                    标题标题标题标题标题标题
-                </h3>
-                <div class="des">
-                    文本文本文本文本文本文本文本文本
-                    文本文本文本文本文本文本文本文本文本
-                    文本文本文本文本文本
+        <div class="full-width" id="block-service">
+            <h2 class="title">我们的股东</h2>
+            <div class="row">
+                <div class="col-6">
+                    <img src="images/kv.jpg" alt=""/>
                 </div>
-                <div class="btn btn-more">更  多</div>
+                <div class="col-6">
+                    <h3 class="subtitle">
+                        股东1 -
+                        标题标题标题标题标题标题
+                    </h3>
+                    <div class="des">
+                        文本文本文本文本文本文本文本文本
+                        文本文本文本文本文本文本文本文本文本
+                        文本文本文本文本文本
+                    </div>
+                    <div class="btn btn-more">更  多</div>
+                </div>
             </div>
         </div>
     </div>

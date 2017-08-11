@@ -1,0 +1,57 @@
+/*For page home*/
+.block-text{
+  //padding: 60px;
+  background: #eee;
+}
+.block-img{
+  overflow: hidden;
+  img{
+    //width: auto;
+    //height: 100%;
+  }
+}
+#block-intro{
+  position: relative;
+  &:after{
+    content: '';
+    display: block;
+    @include size(calc(100% - 20px),calc(100% - 20px));
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+    border: rgba(255,255,255,0.5) 1px solid;
+  }
+  .block-text{
+    padding: 60px;
+  }
+  .des{
+    text-align: left;
+  }
+  .btn{
+    float: right;
+    margin-top: 20px;
+  }
+}
+#block-stockholder{
+  text-align: center;
+  margin: 50px 0;
+  .col-4{
+    padding: 30px 50px 50px;
+    text-align: left;
+  }
+  .subtitle{
+    margin-bottom: 20px;
+  }
+  .des{
+    margin-bottom: 40px;
+  }
+  .btn{
+    float: right;
+  }
+}
+#block-service{
+  text-align: center;
+}
+
+/*---------For page home---------*/
