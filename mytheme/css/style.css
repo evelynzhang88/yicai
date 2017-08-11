@@ -1123,25 +1123,44 @@ p {
 }
 .main-menu > .item a {
   display: block;
-  padding-bottom: 30px;
   color: #333;
   text-decoration: none;
+  box-sizing: border-box;
 }
-.main-menu > .item.active a, .main-menu > .item:hover a {
+.main-menu > .item.active > a, .main-menu > .item:hover > a {
   border-bottom: #dbb673 3px solid;
 }
 .main-menu > .item.active .second-menu, .main-menu > .item:hover .second-menu {
   display: block;
 }
+.main-menu > .item > a {
+  height: 60px;
+}
 .main-menu .second-menu {
   display: none;
   position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
+  left: 50%;
+  top: calc(100% - 3px);
+  width: 140px;
+  margin-left: -70px;
+  background: #fff;
+  text-align: center;
+  border-top: #dbb673 3px solid;
+  box-sizing: border-box;
+  padding: 15px 20px;
 }
 .main-menu .second-menu .item {
   display: block;
+}
+.main-menu .second-menu .item a {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  margin-top: 5px;
+}
+.main-menu .second-menu .item a:hover {
+  color: #dbb673;
+  border-bottom: #dbb673 1px solid;
 }
 
 /*just for mobile*/

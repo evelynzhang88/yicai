@@ -45,29 +45,50 @@
     display: inline-block;
     position: relative;
     margin-left: 5%;
+    //padding: 0 3%;
     a{
       display: block;
-      padding-bottom: 30px;
       color: #333;
       text-decoration: none;
+      box-sizing: border-box;
     }
     &.active,&:hover{
-      a{
+      >a{
         border-bottom: #dbb673 3px solid;
       }
       .second-menu{
         display: block;
       }
     }
+    //for the first level menu
+    >a{
+      height: 60px;
+    }
   }
   .second-menu{
     display: none;
     position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
+    left: 50%;
+    top: calc(100% - 3px);
+    width: 140px;
+    margin-left: -70px;
+    background: #fff;
+    text-align: center;
+    border-top: #dbb673 3px solid;
+    box-sizing: border-box;
+    padding: 15px 20px;
     .item{
       display: block;
+      a{
+        display: block;
+        height: 24px;
+        line-height: 24px;
+        margin-top: 5px;
+        &:hover{
+          color: #dbb673;
+          border-bottom: #dbb673 1px solid;
+        }
+      }
     }
   }
 }
