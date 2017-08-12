@@ -1385,8 +1385,6 @@ h2.title:after {
     float: right;
   }
 }
-/*---------End page home---------*/
-/*just for mobile*/
 @media all and (max-width: 768px) {
   /*For page home*/
   #main-content {
@@ -1400,6 +1398,18 @@ h2.title:after {
     margin: 0 auto;
     text-align: center;
   }
-
-  /*---------End page home---------*/
 }
+/*---------End page home---------*/
+/*For page product-service*/
+#main-content {
+  background: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+/*---------End page product-service---------*/
