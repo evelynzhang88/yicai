@@ -155,7 +155,15 @@ $(document).ready(function(){
         $('.tab-content').removeClass('active').eq(curIndex).addClass('active');
     });
 
+    //prepend header to page
+    $.get( "/mytheme/header.html", function( data ) {
+        $('body').prepend(data);
+    });
 
+    //   append footer to page
+    $.get( "/mytheme/footer.html", function( data ) {
+        $('body').append(data);
+    });
 
 });
 
