@@ -1429,6 +1429,7 @@ h2.title:after {
   line-height: 80px;
   font-size: 1.4rem;
   box-sizing: border-box;
+  border-bottom: #c9c9c9 1px solid;
   cursor: pointer;
 }
 .tab-list .tab-item.active {
@@ -1505,3 +1506,27 @@ h2.title:after {
   }
 }
 /*---------End page company profile---------*/
+/*For page-stockholder*/
+#page-stockholder .tab-list .tab-item {
+  line-height: 1.5;
+  padding: 1.2rem 0;
+  font-size: 1.1rem;
+}
+#page-stockholder .tab-content .col-6 {
+  padding: 2rem;
+}
+#page-stockholder .tab-content.narrow-width {
+  width: 100%;
+}
+
+@media all and (max-width: 768px) {
+  #page-stockholder .tab-list .tab-item {
+    line-height: 1.5;
+    padding: 0.8rem 0;
+    font-size: 0.8rem;
+  }
+  #page-stockholder .tab-content .col-6 {
+    padding: 1rem 0.6rem 0;
+  }
+}
+/*---------End page-stockholder---------*/
