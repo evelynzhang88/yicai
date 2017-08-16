@@ -109,6 +109,7 @@
 /*For page product-service*/
 #main-content{
   background: #fff;
+  margin-top: -80px;
 }
 .tab-content{
   display: none;
@@ -116,5 +117,57 @@
     display: block;
   }
 }
+.tab-list{
+  text-align: center;
+  .tab-item{
+    height: 80px;
+    line-height: 80px;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    &.active{
+      color: #dbb673;
+      border-bottom: #dbb673 2px solid;
+    }
+  }
+}
+.switch-bar-lists{
+  border: #dbb673 1px solid;
+  margin: 50px 0;
+  .col-6{
+    text-align: center;
+    color: #dbb673;
+    cursor: pointer;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    &.active{
+      background: #dbb673;
+      color: #fff;
+    }
+  }
+}
+//  mobile
+@media all and (max-width: 768px){
+
+  #main-content{
+    margin-top: -4rem;
+  }
+  .tab-list{
+    text-align: center;
+    .tab-item{
+      width: calc(4 * 100% / 12);
+      height: 4rem;
+      line-height: 4rem;
+      font-size: 1.1rem;
+    }
+  }
+  .switch-bar-lists{
+    .col-6{
+      width: calc(6 * 100% / 12);;
+    }
+  }
+
+}
 
 /*---------End page product-service---------*/
+

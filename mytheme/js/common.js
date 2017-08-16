@@ -1,10 +1,6 @@
 ;(function(){
 	var ua = navigator.userAgent.toLowerCase();
 	var Common = {
-		gotoPin:function(num){
-			$('.wrapper .pin').removeClass('current');
-			$('.wrapper .pin').eq(num).addClass('current');
-		},
 		getParameterByName:function(name){
 			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
@@ -164,6 +160,11 @@ $(document).ready(function(){
     $.get( "/mytheme/footer.html", function( data ) {
         $('body').append(data);
     });
+
+    /*
+    * For the navigation
+    * */
+
 
 });
 

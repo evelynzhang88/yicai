@@ -613,12 +613,12 @@ html {
 /*the rem just for set the font size for global website*/
 @media all and (max-width: 767px) {
   html {
-    font-size: 12px;
+    font-size: calc(18px * 100vw / 640);
   }
 }
 @media all and (min-width: 768px) {
   html {
-    font-size: calc( 12px + 8 * ((100vw - 700px) / 1500));
+    font-size: calc( 12px + 8 * ((100vw - 768px) / 1500));
   }
 }
 body {
@@ -1403,6 +1403,7 @@ h2.title:after {
 /*For page product-service*/
 #main-content {
   background: #fff;
+  margin-top: -80px;
 }
 
 .tab-content {
@@ -1412,4 +1413,54 @@ h2.title:after {
   display: block;
 }
 
+.tab-list {
+  text-align: center;
+}
+.tab-list .tab-item {
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.tab-list .tab-item.active {
+  color: #dbb673;
+  border-bottom: #dbb673 2px solid;
+}
+
+.switch-bar-lists {
+  border: #dbb673 1px solid;
+  margin: 50px 0;
+}
+.switch-bar-lists .col-6 {
+  text-align: center;
+  color: #dbb673;
+  cursor: pointer;
+  height: 2.6rem;
+  line-height: 2.6rem;
+}
+.switch-bar-lists .col-6.active {
+  background: #dbb673;
+  color: #fff;
+}
+
+@media all and (max-width: 768px) {
+  #main-content {
+    margin-top: -4rem;
+  }
+
+  .tab-list {
+    text-align: center;
+  }
+  .tab-list .tab-item {
+    width: calc(4 * 100% / 12);
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.1rem;
+  }
+
+  .switch-bar-lists .col-6 {
+    width: calc(6 * 100% / 12);
+  }
+}
 /*---------End page product-service---------*/

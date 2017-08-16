@@ -8,13 +8,13 @@ html{
 /*the rem just for set the font size for global website*/
 @media all and (max-width: 767px){
   html {
-    font-size: 12px;
+    font-size: calc(18px * 100vw / 640);
   }
 }
 @media all and (min-width: 768px){
   html {
     //font-size: 14px;
-    font-size: calc( 12px + 8 * ((100vw - 700px) / 1500));
+    font-size: calc( 12px + 8 * ((100vw - 768px) / 1500));
   }
 }
 
