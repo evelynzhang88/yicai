@@ -125,7 +125,12 @@ h2.title{
 }
 /*-----End grid layout-----*/
 
-
+.f-l{
+  float: left;
+}
+.f-r{
+  float: right;
+}
 .btn{
   display: inline-block;
   border: #dbb673 1px solid;

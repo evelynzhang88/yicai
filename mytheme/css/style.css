@@ -828,6 +828,14 @@ h2.title:after {
   }
 }
 /*-----End grid layout-----*/
+.f-l {
+  float: left;
+}
+
+.f-r {
+  float: right;
+}
+
 .btn {
   display: inline-block;
   border: #dbb673 1px solid;
@@ -1312,7 +1320,7 @@ h2.title:after {
   overflow: hidden;
 }
 
-#main-content {
+.main-content {
   position: relative;
   z-index: 2;
   margin-top: -50px;
@@ -1387,7 +1395,7 @@ h2.title:after {
 }
 @media all and (max-width: 768px) {
   /*For page home*/
-  #main-content {
+  .main-content {
     width: 90vw;
     margin: -4rem auto 0;
   }
@@ -1401,7 +1409,7 @@ h2.title:after {
 }
 /*---------End page home---------*/
 /*For page product-service*/
-#main-content {
+.main-content {
   background: #fff;
   margin-top: -80px;
 }
@@ -1427,6 +1435,14 @@ h2.title:after {
   color: #dbb673;
   border-bottom: #dbb673 2px solid;
 }
+.tab-list .title {
+  font-size: 2rem;
+  color: #dbb673;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
 
 .switch-bar-lists {
   border: #dbb673 1px solid;
@@ -1445,7 +1461,7 @@ h2.title:after {
 }
 
 @media all and (max-width: 768px) {
-  #main-content {
+  .main-content {
     margin-top: -4rem;
   }
 
@@ -1458,9 +1474,34 @@ h2.title:after {
     line-height: 4rem;
     font-size: 1.1rem;
   }
+  .tab-list .title {
+    font-size: 1.1rem;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
 
   .switch-bar-lists .col-6 {
     width: calc(6 * 100% / 12);
   }
 }
 /*---------End page product-service---------*/
+/*For page company profile*/
+#company-profile .col-6 {
+  padding: 1rem;
+}
+#company-profile .des {
+  padding: 2rem;
+}
+
+@media all and (max-width: 768px) {
+  #company-profile .col-6 {
+    padding: 0;
+    margin: 2rem 0 0rem;
+  }
+  #company-profile .des {
+    padding: 0;
+  }
+}
+/*---------End page company profile---------*/
