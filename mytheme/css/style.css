@@ -1530,3 +1530,13 @@ h2.title:after {
   }
 }
 /*---------End page-stockholder---------*/
+/*For page-manage*/
+#page-manage .manager-lists {
+  width: 95%;
+  margin: 0 auto;
+}
+#page-manage .manager-lists .item {
+  padding: 1rem;
+}
+
+/*---------End page-manage---------*/
